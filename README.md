@@ -48,7 +48,7 @@ local function loadSettings()
 			-- for debug in studio
 			if useStudio then
 				file = [[
-		{"Setting":{"rayfieldOpen":{"Value":"E","Type":"bind","Name":"Whale Hub Keybind","Element":{"HoldToInteract":false,"Ext":true,"Name":"Whale Hub Keybind","Set":null,"CallOnChange":true,"Callback":null,"CurrentKeybind":"K"}}},"System":{"usageAnalytics":{"Value":false,"Type":"toggle","Name":"익명화 ","Element":{"Ext":true,"Name":"익명화","Set":null,"CurrentValue":false,"오류류":null}}}}
+		{"General":{"rayfieldOpen":{"Value":"E","Type":"bind","Name":"Whale Hub Keybind","Element":{"HoldToInteract":false,"Ext":true,"Name":"Whale Hub Keybind","Set":null,"CallOnChange":true,"Callback":null,"CurrentKeybind":"K"}}},"System":{"usageAnalytics":{"Value":false,"Type":"toggle","Name":"Anonymised Analytics","Element":{"Ext":true,"Name":"Anonymised Analytics","Set":null,"CurrentValue":false,"오류류":null}}}}
 	]]
 			end
 
@@ -1690,6 +1690,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 				local KeyFound = false
 				local FoundKey = ''
 				for _, MKey in ipairs(Settings.KeySettings.Key) do
+
 					if KeyMain.Input.InputBox.Text == MKey then
 						KeyFound = true
 						FoundKey = MKey
